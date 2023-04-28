@@ -48,3 +48,52 @@ const sumOfAges = age.reduce(function (age, accumulator) {
     return accumulator + age;
 }, 0);
 console.log(sumOfAges)
+
+//Objetos dentro de objetos
+const person = {
+    firstName: 'Fabricio',
+    lastName: 'Mendes',
+    age: '33',
+    hobbies: ['Assistir vídeos na internet', 'Jogar', 'Andar de moto']
+};
+const firstName = person.firstName;
+const lastName = person.lastName;
+const age = person.age;
+const hobbies = person.hobbies;
+const play = person.hobbies[1];
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(hobbies);
+console.log(play);
+//destructuring
+const {firstName: primeiroNome, lastName: ultimoNome, age: idade, hobbies} = person; 
+console.log(primeiroNome);
+console.log(ultimoNome);
+console.log(idade);
+console.log(hobbies);
+person.dog = {name: 'Simba', age: 4};
+console.log(person.dog.age);
+
+//JSON
+const todos = [
+    {
+        id: 1,
+        description: 'Estudar Programação',
+        isCompleted: false,
+    },
+    {
+        id: 2,
+        description: 'Ler',
+        isCompleted: true,
+    },
+    {
+        id: 3,
+        description: 'Treinar',
+        isCompleted: true,
+    },
+];
+const descriptionOfLastTodo = todos[2].description;
+console.log(descriptionOfLastTodo);
+const todosJSON = JSON.stringify(todos);
+const todosList = JSON.parse(todosJSON);
