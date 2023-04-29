@@ -97,3 +97,60 @@ const descriptionOfLastTodo = todos[2].description;
 console.log(descriptionOfLastTodo);
 const todosJSON = JSON.stringify(todos);
 const todosList = JSON.parse(todosJSON);
+
+//Loops
+const cars = ['Ferrari', 'Tesla', 'Mercedes'];
+for (let index = 1; index < 10; index++) {    
+console.log(index);
+}
+for (let i = 0; i < cars.length; i++) {
+    console.log(cars[i]);
+}
+for (let car of cars) {
+    console.log(car);
+}
+cars.forEach(function (car, index) {
+    console.log(index);
+    console.log(car);
+});
+let index = 0;
+while (index < 10) {
+    console.log('index é menor do que 10');
+    index ++;
+}
+const person = {
+    name: 'Jane',
+    age: 21,
+};
+for (property in person) {
+    console.log(person[property]);
+}
+
+// if else
+const sum = 1 + 1;
+if (sum === 2) {
+    console.log('Sum is 2!');
+} else if (sum === 3) {
+    console.log('Sum is 3!');
+} else {
+    console.log('Sum is not 2!');
+}
+let number;
+if (sum === 2) {
+    number = 2;
+} else {
+    number = 4;
+}
+// Ternary Operator
+let number = sum === 2 ? 2 : 4;
+console.log(number);
+// && ||
+const sum1 = 2 + 2;
+const sum2 = 3 + 10;
+
+if (sum1 === 4 && sum2 === 6) {
+    console.log('sum1 is 4 and sum2 is 6!');
+}
+if (sum1 === 4 && sum2 === 6) {
+    console.log('sum1 is 4 and sum2 is 6!');
+}

@@ -1,19 +1,13 @@
-const todos = [
-    {
-        id: 1,
-        description: 'Estudar Programação',
-        isCompleted: false,
-    },
-    {
-        id: 2,
-        description: 'Ler',
-        isCompleted: true,
-    },
-    {
-        id: 3,
-        description: 'Treinar',
-        isCompleted: true,
-    },
-];
-const todosJSON = JSON.stringify(todos);
-console.log(todosJSON);
+const car = 'Mercedes'
+
+switch (car) {
+    case 'Mercedes':
+        console.log('Mercedes is beautiful');
+        break;
+    case 'Ferrari':
+        console.log('Ferrari is very red');
+        break;
+    case 'Tesla':
+        console.log('Tesla is smart');
+        break;
+}
