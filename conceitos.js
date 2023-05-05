@@ -154,3 +154,97 @@ if (sum1 === 4 && sum2 === 6) {
 if (sum1 === 4 && sum2 === 6) {
     console.log('sum1 is 4 and sum2 is 6!');
 }
+
+// switch
+const car = 'Mercedes'
+switch (car) {
+    case 'Mercedes':
+        console.log('Mercedes is beautiful');
+        break;
+    case 'Ferrari':
+        console.log('Ferrari is very red');
+        break;
+    case 'Tesla':
+        console.log('Tesla is smart');
+        break;
+}
+
+//Falsy
+const x = '';
+const y = 0;
+const a = null;
+const b = undefined;
+console.log(!!x);
+console.log(!!y);
+console.log(!!a);
+console.log(!!ab;
+if (x) {
+    console.log(x);
+}
+//Truthy
+const list = [];
+const object = {};
+console.log(!list) //invertido booleano
+console.log(!!object) //checa true ou false
+
+if (list.length === 0) {
+    console.log(list)
+}
+
+//Functions e Arrow Functions
+function sum(a, b) {
+    console.log(a + b);
+}
+sum(2, 10);
+function sum(a, b) {
+    return a + b;
+}
+const sumValue = sum(2, 2)
+console.log(sumValue);
+function sum(a, b = 10) {
+    return a + b;
+}
+const sumArrow = (a, b = 10) => a + b;
+const sumArrowValue = sumArrow(2)
+const sumValue = sum(2)
+console.log(sumValue);
+console.log(sumArrowValue);
+
+// Programação Orientada a Objetos (POO)
+class Person {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    static speak() {
+        console.log('Hello world!');
+    }
+}
+const person = new Person('Jane', 'Doe', 40);
+console.log(person);
+console.log(person.getFullName());
+Person.speak();
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(`${this.name} made some noise!`)
+    }
+}
+class Dog extends Animal {
+    constructor(name) {
+        super(name);
+    }
+    speak() {
+        console.log(`${this.name} barked!`)
+    }
+}
+const animal = new Animal('Simba');
+const dog = new Dog('Bob');
+animal.speak();
+dog.speak();
