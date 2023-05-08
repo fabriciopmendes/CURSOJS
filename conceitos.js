@@ -248,3 +248,42 @@ const animal = new Animal('Simba');
 const dog = new Dog('Bob');
 animal.speak();
 dog.speak();
+
+// Selecionar apenas um elemento
+const addUserText = document.getElementById("add-user");
+addUserText.innerText = 'Adicionar usuário'
+const addUserText = document.querySelector("#add-user")
+addUserText.textContent = 'Adicionar usuário'
+const myForm = document.querySelector(".item")
+// Selecionar múltiplos elementos
+const allItems = document.querySelectorAll(".item")
+console.log(allItems[1])
+const allItems = document.getElementsByClassName('item')
+const allItems = document.getElementsByTagName('li')
+// Alterar elementos
+const items = document.querySelector('.items');
+items.firstElementChild.remove();
+items.lastElementChild.remove();
+items.children[0].textContent = 'Item Um';
+items.lastElementChild.innerHTML = '<h1>Hello world!</h1>'
+const button = document.querySelector('.btn');
+button.style.background = 'red';
+const submitButton = document.querySelector("#submit-button");
+const myForm = document.querySelector("#my-form");
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const items = document.querySelector('.items');
+const body = document.querySelector('body');
+submitButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    const nameValue = nameInput.value;
+    const emailValue = emailInput.value;
+
+    if (nameValue === "" || emailValue === '') {
+        return alert("Please fill out all the fields!")
+    }
+    myForm.style.background = 'red';
+    items.firstElementChild.textContent = nameValue;
+    items.children[1].textContent = emailValue;
+    body.style.background = 'white'
+})
